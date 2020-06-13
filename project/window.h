@@ -14,18 +14,18 @@ public:
     Window(QWidget *parent = nullptr);
     inline void onClockTime();
     inline void startClock();
+
+    inline void Addtime();
+    inline void Subtime();
     ~Window();
 private:
-    QPushButton Add5Min,Min5Min;
+    QPushButton AddMin,SubMin;
     QPushButton Start;
 
-    QLabel timedisplay;
+    QLabel timedisplayer, timeoutdisplayer, tip1;
     QTimer timer;
-    int time, timeout;
-    bool StartOrNot;
 
-/*signals:
-    inline void StartClock(void);
-    inline void StopClock(void);*/
+    int time, timeout, timeout2;
+    bool StartOrNot, sate;
 };
 #endif // WINDOW_H
